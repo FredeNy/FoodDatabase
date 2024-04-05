@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <main class="maingrid">
+
+        <div class="box">
+
+
+            <section class="foodform">
+                <form class="forms_container">
+
+                    <h2>RECIPES</h2>
+
+                    <fieldset>
+                        <div class="formgroup">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" name="name" placeholder="Enter something" required>
+                        </div>
+
+                        <div class="formgroup">
+                            <label for="description">Description</label>
+                            <input id="description" type="text" name="description" placeholder="Enter something"
+                                required>
+                        </div>
+
+                        <div class="formgroup">
+                            <label for="ingredients">Ingredients</label>
+                            <input id="ingredients" type="textarea_one_per_line" name="ingredients"
+                                placeholder="Enter something" required>
+                        </div>
+
+                        <fieldset>
+                            <div class="formcheckbox">
+                                <legend>
+                                    <label>Allergens</label>
+                                </legend>
+
+                                <div class="formcheckboxstyling">
+                                    <label for="allergens">Gluten allergy
+                                        <input id="allergens" type="checkbox" name="allergens"></label>
+
+                                    <label for="allergens">Nut allergy
+                                        <input id="allergens" type="checkbox" name="allergens"></label>
+
+                                    <label for="allergens">seafood allergy
+                                        <input id="allergens" type="checkbox" name="allergens"></label>
+
+
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <div class="formradio">
+                                <legend>
+                                    <label>Diet</label>
+                                </legend>
+                                <div class="formradiostyling">
+                                    <label for="diet">None
+                                        <input id="diet" type="radio" name="diet"></label>
+
+                                    <label for="diet">Vegan
+                                        <input id="diet" type="radio" name="diet"></label>
+
+                                    <label for="diet">Vegetarian
+                                        <input id="diet" type="radio" name="diet"></label>
+                                </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <div class="formradio">
+                                <legend><label>Student friendly</label></legend>
+
+                                <div class="formradiostyling">
+                                    <label for="studentFriendly">Yes
+                                        <input id="studentFriendly" type="radio" name="studentFriendly">
+                                    </label>
+
+                                    <label for="studentFiendly">No
+                                        <input id="studentFriendly" type="radio" name="studentFriendly">
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="formgroup">
+                            <label for="origin">Origin</label>
+                            <input id="origin" type="text" name="origin" placeholder="Enter something" required>
+
+                            <label for="serves">Serves</label>
+                            <input id="serves" type="number" name="serves" placeholder="Enter something" required>
+
+                            <button>submit recipe</button>
+                    </fieldset>
+
+                </form>
+            </section>
+            <section class="recipes"></section>
+        </div>
+        </div>
+
+        <section class="recipecard">
+            <template>
+                <article class="card">
+                    <header>
+                        <div class="header-content">
+                            <h2>
+                                <span data-name>Brændende kærlighed</span>,
+                                <span data-origin>Denmark</span>
+                            </h2>
+
+                            <div>
+                                <dl>
+                                    <div>
+                                        <dt class="visually-hidden">Origin</dt>
+                                        <dd data-origin>Denmark</dd>
+                                    </div>
+                                </dl>
+                                <dl>
+                                    <div>
+                                        <dt class="visually-hidden">Diet</dt>
+                                        <dd data-diet>Vegetarian</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                        <p class="status">
+                            <span data-studentFriendly>Student Friendly!</span>
+                        </p>
+                        <img data-img
+                            src="https://images.pexels.com/photos/162137/duckling-birds-yellow-fluffy-162137.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                            alt="" />
+                    </header>
+                    <dl class="ingredient-list" data-ingredients>
+                        <dt class="visually-hidden">Ingredients</dt>
+
+                    </dl>
+                    <section>
+                        <h3>
+                            <div>
+                                <dt class="visually-hidden">Serves</dt>
+                                <dd data-diet>For 2</dd>
+                            </div>
+                        </h3>
+
+                    </section>
+                    <div class="actions">
+                        <button data-id="15" data-action="delete">Delete</button>
+                        <button data-id="15" data-action="update">Update</button>
+                    </div>
+                </article>
+            </template>
+        </section>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
